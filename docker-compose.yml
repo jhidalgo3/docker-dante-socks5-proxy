@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  dante:
+    image: jhidalgo3/danteproxy
+    ports:
+      - "1080:1080"
+    volumes:
+      - ./data:/etc/dante
+    tmpfs:
+      - /run
+    restart: unless-stopped
